@@ -7,7 +7,7 @@
 </h1
 <h1 align="center">
   <br>
-  <img src="./04-resources/logos/synd-light.png" alt="Industrial Systems Logo" width="350">
+  <img src="./04-resources/logos/synd-light.svg" alt="Industrial Systems Logo" width="350">
   <br>
 </h1>
 
