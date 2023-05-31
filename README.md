@@ -1,10 +1,10 @@
 <h1 align="center">
   <br>
-  <img src="./04-resources/logos/hei-en.svg" alt="HEI Logo Logo" width="200" height="200">
+  <img src="./04-resources/logos/hei-en.svg" alt="HEI Logo Logo" width="350">
   <br>
   HEI-Vs Engineering School - Typst Thesis Template
   <br>
-</h1
+</h1>
 <h1 align="center">
   <br>
   <img src="./04-resources/logos/synd-light.svg" alt="Industrial Systems Logo" width="350">
