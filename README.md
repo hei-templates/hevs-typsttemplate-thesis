@@ -1,8 +1,13 @@
 <h1 align="center">
   <br>
-  <img src="./04-resources/logos/hei-vs-light.svg" alt="HEI Logo Logo" width="200" height="200">
+  <img src="./04-resources/logos/hei-en.svg" alt="HEI Logo Logo" width="200" height="200">
   <br>
-  Hevs Typst Thesis Template
+  HEI-Vs Engineering School - Typst Thesis Template
+  <br>
+</h1
+<h1 align="center">
+  <br>
+  <img src="./04-resources/logos/synd-light.png" alt="Industrial Systems Logo" width="350">
   <br>
 </h1>
 
@@ -112,6 +117,9 @@ No explanation needed, install `make`, `rust` and `typst` fro myou favorite pack
 [(Back to top)](#table-of-contents)
 
 [![Read Guide to Typst](https://img.shields.io/badge/Read-Guide_to_Typst-blue)](https://github.com/tschinz/hevs-typsttemplate-thesis/blob/master/guite-to-typst.pdf) [![Download Guide to Typst](https://img.shields.io/badge/Download-Guide_to_Typst-brightgreen)](https://github.com/tschinz/hevs-typsttemplate-thesis/raw/master/guide-to.typst.pdf)
+
+[![Read Guide to Thesis](https://img.shields.io/badge/Read-Guide_to_Thesis-blue)](https://github.com/tschinz/hevs-typsttemplate-thesis/blob/master/guite-to-thesis.pdf) [![Download Guide to Thesis](https://img.shields.io/badge/Download-Guide_to_Thesis-brightgreen)](https://github.com/tschinz/hevs-typsttemplate-thesis/raw/master/guide-to-thesis.pdf)
+
 
 ## Credits
 
