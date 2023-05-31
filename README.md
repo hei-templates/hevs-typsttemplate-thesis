@@ -116,7 +116,7 @@ No explanation needed, install `make`, `rust` and `typst` fro myou favorite pack
 
 [(Back to top)](#table-of-contents)
 
-[![Read Guide to Typst](https://img.shields.io/badge/Read-Guide_to_Typst-blue)](https://github.com/tschinz/hevs-typsttemplate-thesis/blob/main/guide-to-typst.pdf) [![Download Guide to Typst](https://img.shields.io/badge/Download-Guide_to_Typst-brightgreen)](https://github.com/tschinz/hevs-typsttemplate-thesis/raw/main/guide-to.typst.pdf)
+[![Read Guide to Typst](https://img.shields.io/badge/Read-Guide_to_Typst-blue)](https://github.com/tschinz/hevs-typsttemplate-thesis/blob/main/guide-to-typst.pdf) [![Download Guide to Typst](https://img.shields.io/badge/Download-Guide_to_Typst-brightgreen)](https://github.com/tschinz/hevs-typsttemplate-thesis/raw/main/guide-to-typst.pdf)
 
 [![Read Guide to Thesis](https://img.shields.io/badge/Read-Guide_to_Thesis-blue)](https://github.com/tschinz/hevs-typsttemplate-thesis/blob/main/guide-to-thesis.pdf) [![Download Guide to Thesis](https://img.shields.io/badge/Download-Guide_to_Thesis-brightgreen)](https://github.com/tschinz/hevs-typsttemplate-thesis/raw/main/guide-to-thesis.pdf)
 
