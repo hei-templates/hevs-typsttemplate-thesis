@@ -1,6 +1,10 @@
+//
+// Description: Title page for the thesis template
+// Author     : Silvan Zahno
+//
 #import "../00-templates/helpers.typ": *
 
-#let page-title(
+#let page-title-thesis(
   title: none,
   date: (),
   school: (),

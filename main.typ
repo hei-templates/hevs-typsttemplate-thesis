@@ -1,3 +1,6 @@
+//
+// Description: Main document to stitch everything together
+//
 #import "00-templates/template-thesis.typ": *
 #import "01-settings/metadata.typ": *
 

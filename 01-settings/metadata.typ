@@ -1,6 +1,9 @@
+
+//
+// Description: Metadata of the document
+//
 #import "../00-templates/constants.typ": *
 
-// Metadata of the document
 #let title= "Thesis Template"
 #let subtitle= "Longer Subtitle"
 #let version= "v0.1"
@@ -32,9 +35,9 @@
 )
 
 #let date= (
-  submission: "18 August 2023",
-  current: "31 May 2023",
-  year: 2023,
+  submission: "18 August " + datetime.today().display("[year]"),
+  current: datetime.today().display("[day].[month].[year]"),
+  year: datetime.today().display("[year]"),
 )
 
 #let tableof = (

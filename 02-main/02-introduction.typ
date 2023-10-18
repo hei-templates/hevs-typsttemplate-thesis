@@ -10,7 +10,7 @@
 #gls-scrum.description
 
 #cite("stateoftheArt")
-#cite("stateoftheArt", [p.7ff])
+#cite("stateoftheArt", supplement:[p.7ff])
 
 ```rust
 fn main() {}

@@ -1,4 +1,7 @@
-// Creating nice looking item list with different icons
+//
+// Description: Creating nice looking item list with different icons
+// Author     : Silvan Zahno
+//
 #import "constants.typ": *
 
 #let item-list(

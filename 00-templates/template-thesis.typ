@@ -1,5 +1,9 @@
+//
+// Description: HEVS Thesis Typst Template
+// Author     : Silvan Zahno
+//
 #import "helpers.typ": *
-#import "page-title.typ": *
+#import "page-title-thesis.typ": *
 #import "page-reportinfo.typ": *
 
 #let thesis(
@@ -30,7 +34,7 @@
   set document(author: author.name, title: title)
   set page(margin: (top:3.5cm, bottom:3.5cm, rest:3.5cm))
 
-  // Header and Footer
+  // header and footer
   set page(
     header: locate(loc => if loc.page() >=2 [
     #set text(small)
@@ -102,7 +106,7 @@
   }
 
   // Title page
-  page-title(
+  page-title-thesis(
     title: title,
     date: date,
     school: school,
@@ -121,48 +125,10 @@
 
   // Table of content
   pagebreak()
-  if tableof.toc == true {
-    outline(
-      title: [Table of content],
-      indent: true,
-    )
-  }
-
-  // Table of figures
-  if tableof.tof == true {
-    outline(
-      title: [Table of figures],
-      target: figure.where(kind: image),
-      indent: true,
-    )
-  }
-
-  // Table of tables
-  if tableof.tot == true {
-    outline(
-      title: [Table of tables],
-      target: figure.where(kind: table),
-      indent: true,
-    )
-  }
-
-  // Table of listings
-  if tableof.tol == true {
-    outline(
-      title: [Table of listings],
-      target: figure.where(kind: raw),
-      indent: true,
-    )
-  }
-
-  // Table of equation
-  if tableof.toe == true {
-    outline(
-      title: [Table of equation],
-      target: math.equation.where(block:true),
-      indent: true,
-    )
-  }
+  toc(
+    lang: lang,
+    tableof: tableof,
+  )
 
   // Main body
   set par(justify: true)

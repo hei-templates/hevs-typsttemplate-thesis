@@ -1,4 +1,9 @@
+//
+// Description: Commonly used constants in the templates
+// Author     : Silvan Zahno
+//
 // Fontsizes
+#let tinyer  = 6pt
 #let tiny    = 8pt
 #let smaller = 9pt
 #let small   = 10pt
@@ -8,7 +13,30 @@
 #let huge    = 24pt
 #let huger   = 36pt
 
+// fontsize+
+#let tinyer_p  = tinyer+5pt
+#let tiny_p    = tiny+5pt
+#let smaller_p = smaller+5pt
+#let small_p   = small+5pt
+#let normal_p  = normal+5pt
+#let large_p   = large+5pt
+#let larger_p  = larger+5pt
+#let huge_p    = huge+5pt
+#let huger_p   = huger+5pt
+
+// fontsizes++
+#let tinyer_pp  = tinyer+10pt
+#let tiny_pp    = tiny+10pt
+#let smaller_pp = smaller+10pt
+#let small_pp   = small+10pt
+#let normal_pp  = normal+10pt
+#let large_pp   = large+10pt
+#let larger_pp  = larger+10pt
+#let huge_pp    = huge+10pt
+#let huger_pp   = huger+10pt
+
 // Colors
+#let box-border      = rgb("#252525")
 #let code-bg         = rgb("#F5F5F5")
 #let code-border     = rgb("#F5F5F5").darken(10%)
 #let gray-80         = rgb("#000000").lighten(20%)

@@ -1,3 +1,7 @@
+//
+// Description: Report info page for thesis template
+// Author     : Silvan Zahno
+//
 #import "../00-templates/helpers.typ": *
 
 #let page-reportinfo(
