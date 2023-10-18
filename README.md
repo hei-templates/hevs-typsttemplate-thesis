@@ -1,6 +1,7 @@
 <h1 align="center">
   <br>
-  <img src="./04-resources/logos/hei-vs-light.svg" alt="HEI Logo Logo" width="200" height="200">
+  <img src="./04-resources/logos/hei-en.svg" alt="HEI Logo Logo" width="200" height="200">
+  <img src="./04-resources/logos/synd-light.svg" alt="HEI Logo Logo" width="200" height="200">
   <br>
   HEI-Vs Engineering School - Typst Thesis Template
   <br>
@@ -49,49 +50,59 @@ This document is made for typst v0.8.0.
 #### MacOS
 
 * Install [homebrew](https://brew.sh)
+  
   ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/
   install.sh)"
   ```
 
 * Install [just](https://just.systems)
+  
   ```bash
-brew install just
+  brew install just
   ```
+
 * Install [typst](https://github.com/typst/typst)
+  
   ```bash
-brew install typst
+  brew install typst
   ```
 
 #### Linux & MacOS (via Rust)
 
 * Install [rust](https://www.rust-lang.org/tools/install)
+  
   ```bash
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   ```
 * Install [just](https://just.systems)
+  
   ```bash
-cargo install just
+  cargo install just
   ```
 * Install [typst](https://github.com/typst/typst)
+  
   ```bash
-cargo install typst
+  cargo install typst
   ```
 
 #### Windows
 
 * Install [chocolatey](https://chocolatey.org)
+  
   ```
-# ensure to use a administrative powershell
-Set-ExecutionPolicy Bypass -Scope Process - Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New- Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/ install.ps1'))
+  # ensure to use a administrative powershell
+  Set-ExecutionPolicy Bypass -Scope Process - Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New- Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/ install.ps1'))
   ```
 * Install [just](https://just.systems)
+  
   ```bash
-choco install just
+  choco install just
   ```
 * Install [typst](https://github.com/typst/typst)
+  
   ```bash
-choco install typst
+  choco install typst
   ```
 
 ### How to use
@@ -101,11 +112,12 @@ choco install typst
 2. Write your thesis there are plugins for VS-Code and Sublimetext available
 
 3. Use the given justfile or typst directly to build the PDF
-
-  With the justfile
+   
+   With the justfile
+   
    ```bash
-just
-Available recipes:
+   just
+   Available recipes:
     clean                      # cleanup intermediate files
     default                    # List all commands
     info                       # Information about the environment
@@ -115,12 +127,13 @@ Available recipes:
     pdf-all file_name=doc_name # build, rename and copy a typ file in all variants
     watch file_name=doc_name   # watch a typ file for continuous incremental build   ```
    ```
-
-  With typst directly
-  ```bash
-typst c main.typ             # compiles thesis to main.pdf
-typst w main.typ             # watches all documents and incrementally compiles to main.pdf
-  ```
+   
+   With typst directly
+   
+   ```bash
+   typst c main.typ             # compiles thesis to main.pdf
+   typst w main.typ             # watches all documents and incrementally compiles to main.pdf
+   ```
 
 ## Contributing
 
