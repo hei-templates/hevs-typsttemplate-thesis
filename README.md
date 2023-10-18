@@ -1,7 +1,7 @@
 <h1 align="center">
   <br>
-  <img src="./04-resources/logos/hei-en.svg" alt="HEI Logo Logo" width="200" height="200">
-  <img src="./04-resources/logos/synd-light.svg" alt="HEI Logo Logo" width="200" height="200">
+  <img src="./04-resources/logos/hei-en.svg" alt="HEI Logo Logo" width="300" height="200">
+  <img src="./04-resources/logos/synd-light.svg" alt="HEI Logo Logo" width="300" height="200">
   <br>
   HEI-Vs Engineering School - Typst Thesis Template
   <br>
@@ -49,61 +49,44 @@ This document is made for typst v0.8.0.
 
 #### MacOS
 
-* Install [homebrew](https://brew.sh)
-  
-  ```bash
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/
-  install.sh)"
-  ```
+```bash
+# [homebrew](https://brew.sh)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/
+install.sh)"
 
-* Install [just](https://just.systems)
-  
-  ```bash
-  brew install just
-  ```
+# [just](https://just.systems)
+brew install just
 
-* Install [typst](https://github.com/typst/typst)
-  
-  ```bash
-  brew install typst
-  ```
+# [typst](https://github.com/typst/typst)
+brew install typst
+```
 
 #### Linux & MacOS (via Rust)
 
-* Install [rust](https://www.rust-lang.org/tools/install)
-  
-  ```bash
-  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-  ```
-* Install [just](https://just.systems)
-  
-  ```bash
-  cargo install just
-  ```
-* Install [typst](https://github.com/typst/typst)
-  
-  ```bash
-  cargo install typst
-  ```
+```bash
+# [rust](https://www.rust-lang.org/tools/install)
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# [just](https://just.systems)
+cargo install just
+
+# [typst](https://github.com/typst/typst)
+cargo install typst
+```
 
 #### Windows
 
-* Install [chocolatey](https://chocolatey.org)
-  
-  ```
-  # ensure to use a administrative powershell
-  Set-ExecutionPolicy Bypass -Scope Process - Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New- Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/ install.ps1'))
-  ```
-* Install [just](https://just.systems)
-  
-  ```bash
-  choco install just
-  ```
-* Install [typst](https://github.com/typst/typst)
-  
-  ```bash
-  choco install typst
-  ```
+```powershell
+# [chocolatey](https://chocolatey.org)
+# ensure to use a administrative powershell
+Set-ExecutionPolicy Bypass -Scope Process - Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New- Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/ install.ps1'))
+
+# [just](https://just.systems)
+choco install just
+
+# [typst](https://github.com/typst/typst)
+choco install typst
+```
 
 ### How to use
 
