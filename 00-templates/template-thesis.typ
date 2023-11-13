@@ -59,7 +59,7 @@
     lang:lang
   )
   // paragraph
-  show par: set block(spacing: 0.55em)
+  show par: set block(spacing: 1em)
   //set par(leading: 0.55em, first-line-indent: 1.8em, justify: true)
 
   // heading
