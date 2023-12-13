@@ -40,11 +40,8 @@
   align(center, [#text(size:large, [#author.name])])
   v(2em)
 
-  align(center,
-    rect(width:100%, height: 2cm, stroke:(top:1pt, left:1pt, rest:2pt))[
-      \
-      #align(center, [#text(size: huge, style: "italic", title)])
-    ]
+  titlebox(
+    title: title,
   )
 
   [

@@ -93,7 +93,16 @@
   set math.equation(numbering: "(1)")
 
   // code blocks
-  show raw: set text(size: tiny)
+  set raw(syntaxes:"syntax/VHDL.sublime-syntax")
+  show raw.where(block: false): set text(weight: "semibold")
+  //show raw.where(block: false): it => {
+  //  highlight(
+  //    fill:code-bg,
+  //    top-edge: "ascender",
+  //    bottom-edge: "bounds",
+  //    extent:1pt, it)
+  //}
+  show raw.where(block: true): set text(size: tiny)
   show raw.where(block: true): it => {
     block(
       fill: code-bg,
