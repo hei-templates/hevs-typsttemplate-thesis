@@ -45,7 +45,7 @@ A Typst template for the HES-SO//Valais Wallis Bachelor thesis.
 
 ### Installation
 
-This document is made for typst v0.8.0.
+This document is made for typst v0.11.0.
 
 #### MacOS
 

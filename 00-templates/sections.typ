@@ -266,6 +266,8 @@
       - a laptop without internet connection
       - a pocketcalculator
       - all paper documents you want
+      It is forbidden to use generative AI.
+      \
       *Good Luck!*
     ]
   } else if lang == "fr" {
@@ -275,6 +277,8 @@
       - un ordinateur portable sans connexion internet
       - une calculatrice de poche
       - tous les documents papier que vous souhaitez
+      Il est interdit d'utiliser l'IA générative.
+      \
       *Bonne chance!*
     ]
   } else if lang == "de" {
@@ -284,6 +288,8 @@
       - ein Laptop ohne Internetanschluss
       - einen Taschenrechner
       - alle Papierdokumente
+      Es ist verboten, generative KI zu verwenden.
+      \
       *Viel Glück!*
     ]
   }
@@ -323,6 +329,46 @@
       - einen Taschenrechner
       Kommentieren Sie ausserdem den gesamten High-Level- und Assembler-Code ordnungsgemäss aus, um seinen Zweck und seine Einbindung in die Programmstruktur zu erklären.
       \ \
+      *Viel Glück!*
+    ]
+  }
+}
+
+#let exam_reminder_syd(
+  lang: "en" // "de" "fr",
+) = {
+  if lang == "en" {
+    infobox[
+      *Exam Reminder:*
+      \
+      You can only use the following items:
+      - your personal notes
+      - the couse slides
+      //- A one-page summary (front and back) prepared by you.
+      It is forbidden to use generative AI.
+      \
+      *Good Luck!*
+    ]
+  } else if lang == "fr" {
+    infobox[
+      *Rappel d'examen :*
+      \
+      Vous ne pouvez utiliser que les éléments suivants :
+      - vos notes personnelles
+      - les diapositives du cours
+      Il est interdit d'utiliser l'IA générative.
+      \
+      *Bonne chance!*
+    ]
+  } else if lang == "de" {
+    infobox[
+      *Prüfungserinnerung:*
+      \
+      Sie können nur die folgenden Elemente verwenden:
+      - Ihre persönlichen Notizen
+      - die Vorlesungsfolien
+      Es ist verboten, generative KI zu verwenden.
+      \
       *Viel Glück!*
     ]
   }
