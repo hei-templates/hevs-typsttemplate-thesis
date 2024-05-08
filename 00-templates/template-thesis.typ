@@ -49,11 +49,8 @@
   // font & language
   set text(
     font: (
-      "New CM Sans",
-      "New Computer Modern Sans",
       "Linux Libertine",
       "Fira Sans",
-      "New Computer Modern",
     ),
     fallback: true,
     lang:lang
