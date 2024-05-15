@@ -76,16 +76,30 @@ cargo install typst
 
 #### Windows
 
+Open a Windows Powershell as Administrator
+
+![](04-resources/windows-powershell.png)
+
 ```powershell
 # [chocolatey](https://chocolatey.org)
 # ensure to use a administrative powershell
-Set-ExecutionPolicy Bypass -Scope Process - Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New- Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/ install.ps1'))
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+```
 
+Open a new Windows Powershell as Administrator
+
+```powershell
 # [just](https://just.systems)
 choco install just
 
 # [typst](https://github.com/typst/typst)
 choco install typst
+
+# [vscode](https://code.visualstudio.com/)
+choco install vscode vscli
+
+# [git](https://git-scm.com/downloads)
+choco install git.install
 ```
 
 ### How to use
