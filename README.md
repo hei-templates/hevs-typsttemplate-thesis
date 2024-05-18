@@ -70,8 +70,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # [just](https://just.systems)
 cargo install just
 
-# [typst](https://github.com/typst/typst)
-cargo install typst
+just install
 ```
 
 #### Windows
@@ -115,14 +114,16 @@ choco install git.install
    ```bash
    just
    Available recipes:
-    clean                      # cleanup intermediate files
-    default                    # List all commands
-    info                       # Information about the environment
-    install                    # install required sw
-    open file_name=doc_name    # open pdf
-    pdf file_name=doc_name     # build, rename and copy a typ file to a pdf
-    pdf-all file_name=doc_name # build, rename and copy a typ file in all variants
-    watch file_name=doc_name   # watch a typ file for continuous incremental build   ```
+    clean                             # cleanup intermediate files
+    default                           # List all commands
+    info                              # Information about the environment
+    install                           # install required sw
+    open file_name=doc_name           # open pdf
+    pdf file_name=doc_name            # build, rename and copy a typ file to a pdf
+    pdf-all file_name=doc_name        # build, rename and copy a typ file in all variants
+    slides folder_name=doc_name       # build presentation slides
+    open-slides folder_name=doc_name  # open slides in presentation mode
+    watch file_name=doc_name          # watch a typ file for continuous incremental build
    ```
    
    With typst directly

@@ -15,7 +15,7 @@ project_name  := file_stem(justfile_directory())
 typst_version := "typst -V"
 typst_github  := "https://github.com/typst/typst typst-cli --tag v0.11.0"
 
-output_dir    := "05-pdf"
+output_dir    := "06-pdf"
 doc_name      := "main"
 
 ##################################################
@@ -40,12 +40,16 @@ doc_name      := "main"
 @install:
   echo "Install typst"
   cargo install --git {{typst_github}}
+  echo "Install polylux"
+  cargo install --git https://github.com/andreasKroepelin/polylux/ --branch release
 
 # install required sw
 [macos]
 @install:
   echo "Install typst"
   brew install typst
+  echo "Install polylux"
+  cargo install --git https://github.com/andreasKroepelin/polylux/ --branch release
 
 # watch a typ file for continuous incremental build
 watch file_name=doc_name:
@@ -71,6 +75,17 @@ open file_name=doc_name:
   echo "-- Generate all variants of {{file_name}}.pdf"
   echo "--"
   just pdf {{file_name}}
+
+@slides folder_name=doc_name:
+  echo "--------------------------------------------------"
+  echo "-- Generate 05-presentations/{{folder_name}}/slides.pdf"
+  typst compile --root ./ 05-presentations/{{folder_name}}/slides.typ 
+  echo "-- Generate 05-presentations/{{folder_name}}/slides.pdfpc"
+  polylux2pdfpc --root ./ 05-presentations/{{folder_name}}/slides.typ 
+  echo "--"
+
+@open-slides folder_name=doc_name:
+  pdfpc 05-presentations/{{folder_name}}/slides.pdf # -s  
 
 # cleanup intermediate files
 [linux]
