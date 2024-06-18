@@ -31,7 +31,7 @@
   shortname: "HEI-VS",
   orientation: "Systems Engineering",
   specialisation: "Infotronics",
-  dean: "Dr. Cyrille Beçencon",
+  dean: "Dr. Cyrille Bezençon",
 )
 
 #let date= (
