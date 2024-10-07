@@ -8,10 +8,13 @@
 #import "../00-templates/items.typ": *
 #import "../00-templates/sections.typ": *
 #import "../01-settings/metadata.typ": *
-#import "../03-tail/glossary.typ": *
 
 // External Plugins
 #import "@preview/tablex:0.0.8" : *
+#import "@preview/glossarium:0.4.1": *
+#show: make-glossary
+
+
 // Fancy pretty print with line numbers and stuff
 #import "@preview/codelst:2.0.1": sourcecode
 
@@ -23,18 +26,6 @@
     }
 })
 
-//-------------------------------------
-// Acronym functions
-//
-#let acrshort(item) = {
-  item.abbr
-}
-#let acrlong(item) = {
-  [#item.long)]
-}
-#let acrfull(item) = {
-  [#item.long (#item.abbr)]
-}
 
 //-------------------------------------
 // Table of content

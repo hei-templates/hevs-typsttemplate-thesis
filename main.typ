@@ -32,6 +32,10 @@
 #include "02-main/06-validation.typ"
 #include "02-main/07-conclusion.typ"
 
+#pagebreak()
+= Glossary <sec:glossary>
+#include "03-tail/glossary.typ"
+
 //-------------------------------------
 // Appendix
 //

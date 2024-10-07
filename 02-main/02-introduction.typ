@@ -4,10 +4,11 @@
 = Introduction <sec:intro>
 == Context Problem
 
-#acrfull(acr-ar)
+#gls("ar")
 
-#gls-scrum.name
-#gls-scrum.description
+#gls("scrum")
+//#gls-description("scrum")
+
 
 #cite(<stateoftheArt>)
 #cite(<stateoftheArt>, supplement:[p.7ff])
