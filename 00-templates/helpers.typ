@@ -6,7 +6,6 @@
 #import "../00-templates/boxes.typ": *
 #import "../00-templates/constants.typ": *
 #import "../00-templates/items.typ": *
-#import "../00-templates/sections.typ": *
 #import "../01-settings/metadata.typ": *
 
 // External Plugins
@@ -265,3 +264,57 @@
   #if option.type == type {text(size:size, style:style, fill:fill)[#body]
   }
 ]}
+
+//-------------------------------------
+// Titlebox
+//
+#let titlebox(
+  width: 100%,
+  radius: 4pt,
+  border: 1pt,
+  inset: 20pt,
+  outset: -10pt,
+  linecolor: box-border,
+  titlesize: huge,
+  subtitlesize: larger,
+  title: [],
+  subtitle: [],
+) = {
+    if title != [] {
+    align(center,
+      rect(
+        stroke: (left:linecolor+border, top:linecolor+border, rest:linecolor+(border+1pt)),
+        radius: radius,
+        outset: (left:outset, right:outset),
+        inset: (left:inset*2, top:inset, right:inset*2, bottom:inset),
+        width: width)[
+          #align(center,
+            [
+              #if subtitle != [] {
+                [#text(titlesize, title) \ \ #text(subtitlesize, subtitle)]
+              } else {
+                text(titlesize, title)
+              }
+            ]
+          )
+        ]
+      )
+    }
+}
+
+//-------------------------------------
+// Part
+//
+#let part(
+  title: [],
+  number: 1,
+  size: huge,
+) = {
+  pagebreak()
+  v(1fr)
+  align(center, smallcaps(text(size, [Part #number])))
+  v(2em)
+  align(center, smallcaps(text(size, title)))
+  v(1fr)
+  pagebreak()
+}
