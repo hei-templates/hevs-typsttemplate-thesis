@@ -7,11 +7,11 @@
 #import "../00-templates/constants.typ": *
 #import "../00-templates/items.typ": *
 #import "../00-templates/sections.typ": *
-#import "../00-templates/tablex.typ": *
 #import "../01-settings/metadata.typ": *
 #import "../03-tail/glossary.typ": *
 
 // External Plugins
+#import "@preview/tablex:0.0.8" : *
 // Fancy pretty print with line numbers and stuff
 #import "@preview/codelst:2.0.1": sourcecode
 

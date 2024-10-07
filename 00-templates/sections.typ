@@ -4,7 +4,7 @@
 //
 #import "constants.typ": *
 #import "boxes.typ": *
-#import "tablex.typ": *
+#import "@preview/tablex:0.0.8" : *
 
 #let part(
   title: [],
