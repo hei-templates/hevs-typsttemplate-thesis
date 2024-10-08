@@ -1,6 +1,4 @@
-#pagebreak()
-
-#heading(numbering:none)[Acknowledgements] <sec:ack>
+#import "/00-templates/helpers.typ": *
 
 #lorem(50)
 

@@ -1,8 +1,4 @@
 
-#pagebreak()
-
-#heading(numbering:none)[Abstract] <sec:abstract>
-
 #lorem(50)
 
 #lorem(50)

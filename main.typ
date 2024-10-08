@@ -26,7 +26,7 @@
 #specifications(
   //path: "/04-resources/specifications.svg"
 )
-#include "/02-main/00-summary.typ"
+#add-chapter("00-summary")
 
 //-------------------------------------
 // Report info + table of content
@@ -44,16 +44,102 @@
 )
 
 //-------------------------------------
-// Content
+// Acknowledgements
 //
-#include "02-main/01-acknowledgements.typ"
-#include "02-main/02-abstract.typ"
-#include "02-main/03-introduction.typ"
-#include "02-main/04-analysis.typ"
-#include "02-main/05-design.typ"
-#include "02-main/06-implementation.typ"
-#include "02-main/07-validation.typ"
-#include "02-main/08-conclusion.typ"
+#pagebreak()
+#heading(numbering:none)[Acknowledgements] <sec:ack>
+#add-chapter("01-acknowledgements")
+
+//-------------------------------------
+// Abstract
+//
+#pagebreak()
+#heading(numbering:none)[Abstract] <sec:abstract>
+#add-chapter("02-abstract")
+
+//-------------------------------------
+// Introduction
+//
+#pagebreak()
+= Introduction <sec:intro>
+#add-chapter(
+  "03-introduction",
+  heading-offset: 1
+)
+
+//-------------------------------------
+// Analysis
+//
+#pagebreak()
+= Analysis <sec:analysis>
+
+#lorem(50)
+
+#add-chapter(
+  "04-analysis",
+  heading-offset: 1,
+  after:<sec:analysis>,
+  before:<sec:design>
+)
+
+//-------------------------------------
+// Design
+//
+#pagebreak()
+= Design <sec:design>
+
+#lorem(50)
+
+#add-chapter(
+  "05-design",
+  heading-offset: 1,
+  after:<sec:design>,
+  before:<sec:impl>
+)
+
+
+//-------------------------------------
+// Implementation
+//
+#pagebreak()
+= Implementation <sec:impl>
+
+#lorem(50)
+
+#add-chapter(
+  "06-implementation",
+  heading-offset: 1,
+  after:<sec:impl>,
+  before:<sec:validation>
+)
+
+
+//-------------------------------------
+// Validation
+//
+#pagebreak()
+= Validation <sec:validation>
+
+#lorem(50)
+
+#add-chapter(
+  "07-validation",
+  heading-offset: 1,
+  after: <sec:validation>,
+  before: <sec:conclusion> 
+)
+
+//-------------------------------------
+// Conclusion
+//
+#pagebreak()
+= Conclusion <sec:conclusion>
+
+#add-chapter(
+  "08-conclusion",
+  heading-offset: 1,
+)
+
 
 
 //-------------------------------------

@@ -1,8 +1,6 @@
-#import "../00-templates/helpers.typ": *
+#import "/00-templates/helpers.typ": *
 
-#pagebreak()
-= Introduction <sec:intro>
-== Context Problem
+= Context Problem
 
 #gls("ar")
 
@@ -18,10 +16,10 @@ fn main() {}
 
 #lorem(50)
 
-== Objectives
+= Objectives
 
 #lorem(50)
 
-== Structure of this report
+= Structure of this report
 
 #lorem(50)
