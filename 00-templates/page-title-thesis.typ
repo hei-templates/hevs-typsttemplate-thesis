@@ -42,6 +42,7 @@
 
   titlebox(
     title: title,
+    subtitle: subtitle,
   )
 
   [
