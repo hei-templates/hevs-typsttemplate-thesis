@@ -376,3 +376,21 @@
   v(1fr)
   pagebreak()
 }
+
+//-------------------------------------
+// Chapter
+//
+#let add-chapter(
+  file,
+  heading-offset: 0,
+  after: none,
+  before: none,
+) = [
+  #if (after != none and before != none) {
+    minitoc(after:after, before:before, indent: true)
+    pagebreak()
+  }
+  #set heading(offset: heading-offset)
+  #include "/02-main/" + file + ".typ"
+  #set heading(offset: 0)
+]
