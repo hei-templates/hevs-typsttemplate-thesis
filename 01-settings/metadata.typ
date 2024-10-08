@@ -2,7 +2,7 @@
 //
 // Description: Metadata of the document
 //
-#import "../00-templates/constants.typ": *
+#import "/00-templates/constants.typ": *
 
 #let title= "Thesis Template"
 #let subtitle= "Longer Subtitle"
@@ -57,5 +57,5 @@
 
 
 #let bib= true
-#let icon="04-resources/icon.svg"
+#let icon="/04-resources/icon.svg"
 #let bibstyle="ieee" //"apa", "chicago-author-date", "chicago-notes", "mla"

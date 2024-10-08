@@ -2,7 +2,7 @@
 // Description: Title page for the thesis template
 // Author     : Silvan Zahno
 //
-#import "../00-templates/helpers.typ": *
+#import "/00-templates/helpers.typ": *
 
 #let page-title-thesis(
   title: none,

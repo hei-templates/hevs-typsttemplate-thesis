@@ -3,10 +3,10 @@
 // Use        : #import "../00-templates/helpers.typ": *
 // Author     : Silvan Zahno
 //
-#import "../00-templates/boxes.typ": *
-#import "../00-templates/constants.typ": *
-#import "../00-templates/items.typ": *
-#import "../01-settings/metadata.typ": *
+#import "/00-templates/boxes.typ": *
+#import "/00-templates/constants.typ": *
+#import "/00-templates/items.typ": *
+#import "/01-settings/metadata.typ": *
 
 // External Plugins
 #import "@preview/tablex:0.0.8" : *
