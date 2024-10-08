@@ -10,7 +10,7 @@
 
 // External Plugins
 #import "@preview/tablex:0.0.8" : *
-#import "@preview/glossarium:0.4.1": *
+#import "@preview/glossarium:0.4.2": *
 #show: make-glossary
 
 

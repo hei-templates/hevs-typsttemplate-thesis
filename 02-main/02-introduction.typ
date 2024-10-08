@@ -6,8 +6,7 @@
 
 #gls("ar")
 
-#gls("scrum")
-//#gls-description("scrum")
+#gls("scrum") : #gls-description("scrum")
 
 
 #cite(<stateoftheArt>)
