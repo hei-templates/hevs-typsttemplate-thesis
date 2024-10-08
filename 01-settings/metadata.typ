@@ -36,8 +36,12 @@
 )
 
 #let date= (
-  submission: "18 August " + datetime.today().display("[year]"),
-  current: datetime.today().display("[day].[month].[year]"),
+  start: datetime(year: 2024, month: 5, day: 13),
+  end: datetime(year: 2024, month: 8, day: 16),
+  mid-term-submission: datetime(year: 2024, month: 6, day: 14),
+  mid-term-presentation: datetime(year: 2024, month: 6, day: 18),
+  submission: datetime(year: 2024, month: 8, day: 16),
+  current: datetime.today(),
   year: datetime.today().display("[year]"),
 )
 

@@ -22,6 +22,7 @@
     tot: false,
     tol: false,
     toe: false,
+    indent: none,
   ),
   icons: (
     topleft: none,
@@ -79,6 +80,15 @@
     let num = numbering(it.numbering, ..counter(heading).at(it.location()))
     unshift_prefix(num + h(0.8em), it.body)
   }
+
+  show heading: (it) => {
+    if (depth-max != none) and (it.level > depth-max) {
+      h(0.8em)*(it.level - depth + 1) + it.body + linebreak()
+    } else {
+      it
+    }
+  }
+
   //show heading.where(level: 1): set text(size:huge)
   //show heading.where(level: 1): set pad(size:huge)
 
@@ -114,6 +124,7 @@
   // Title page
   page-title-thesis(
     title: title,
+    subtitle: subtitle,
     date: date,
     school: school,
     author: author,
@@ -122,19 +133,6 @@
     icons: icons,
   )
 
-  // Report info
-  // page-reportinfo(
-  //   author: author,
-  //   date: date.current,
-  //   signature: author.signature,
-  // )
-
-  // Table of content
-  // pagebreak()
-  // toc(
-  //   lang: lang,
-  //   tableof: tableof,
-  // )
 
   // Main body
   set par(justify: true)

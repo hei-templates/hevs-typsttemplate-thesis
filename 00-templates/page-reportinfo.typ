@@ -35,7 +35,7 @@
     stroke: none,
     columns: (auto,auto),
     align: left + horizon,
-    [Place, date:], [#author.place, #date],
+    [Place, date:], [#author.place, #date.display("[day].[month].[year]")],
     [Signature:],
     if signature != none {
         [#line(start: (0cm,2cm),length:5cm) #v(-0.4cm) #pad(x: 2.5em, image(author.signature, width:3cm))]

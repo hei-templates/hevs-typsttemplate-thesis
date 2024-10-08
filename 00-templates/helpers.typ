@@ -336,7 +336,7 @@
   titlesize: huge,
   subtitlesize: larger,
   title: [],
-  subtitle: [],
+  subtitle: none,
 ) = {
     if title != [] {
     align(center,
@@ -348,7 +348,7 @@
         width: width)[
           #align(center,
             [
-              #if subtitle != [] {
+              #if subtitle != none {
                 [#text(titlesize, title) \ \ #text(subtitlesize, subtitle)]
               } else {
                 text(titlesize, title)

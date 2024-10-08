@@ -6,6 +6,7 @@
 
 #let page-title-thesis(
   title: none,
+  subtitle: none,
   date: (),
   school: (),
   author: (),
@@ -54,7 +55,12 @@
     #expert.name, #link("mailto:expert.email")[#expert.email]
     \ \
     _Submission date of the report_ \
-    #date.submission
+    #let submission-date = if midterm {
+      date.mid-term-submission
+    } else {
+      date.submission
+    }
+    #submission-date.display("[day] [month repr:long] [year]")
 
     #v(1fr)
   ]
