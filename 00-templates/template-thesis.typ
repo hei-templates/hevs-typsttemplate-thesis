@@ -123,18 +123,18 @@
   )
 
   // Report info
-  page-reportinfo(
-    author: author,
-    date: date.current,
-    signature: author.signature,
-  )
+  // page-reportinfo(
+  //   author: author,
+  //   date: date.current,
+  //   signature: author.signature,
+  // )
 
   // Table of content
-  pagebreak()
-  toc(
-    lang: lang,
-    tableof: tableof,
-  )
+  // pagebreak()
+  // toc(
+  //   lang: lang,
+  //   tableof: tableof,
+  // )
 
   // Main body
   set par(justify: true)

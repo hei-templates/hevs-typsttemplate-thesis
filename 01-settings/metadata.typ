@@ -7,6 +7,7 @@
 #let title= "Thesis Template"
 #let subtitle= "Longer Subtitle"
 #let version= "v0.1"
+#let lang= "en"
 
 #let author= (
   name: "Firstname Lastname",

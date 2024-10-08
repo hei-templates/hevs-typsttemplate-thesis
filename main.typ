@@ -16,22 +16,49 @@
   expert: expert,
   school: school,
   date: date,
+  lang: lang,
   tableof: tableof,
   icons: icons,
+)
+//-------------------------------------
+// Specifications + Summary
+//
+#specifications(
+  //path: "/04-resources/specifications.svg"
+)
+#include "/02-main/00-summary.typ"
+
+//-------------------------------------
+// Report info + table of content
+//
+#pagebreak()
+#page-reportinfo(
+  author: author,
+  date: date.current,
+  signature: author.signature,
+)
+#pagebreak()
+#toc(
+  lang: lang,
+  tableof: tableof,
 )
 
 //-------------------------------------
 // Content
 //
-#include "02-main/00-acknowledgements.typ"
-#include "02-main/01-abstract.typ"
-#include "02-main/02-introduction.typ"
-#include "02-main/03-analysis.typ"
-#include "02-main/04-design.typ"
-#include "02-main/05-implementation.typ"
-#include "02-main/06-validation.typ"
-#include "02-main/07-conclusion.typ"
+#include "02-main/01-acknowledgements.typ"
+#include "02-main/02-abstract.typ"
+#include "02-main/03-introduction.typ"
+#include "02-main/04-analysis.typ"
+#include "02-main/05-design.typ"
+#include "02-main/06-implementation.typ"
+#include "02-main/07-validation.typ"
+#include "02-main/08-conclusion.typ"
 
+
+//-------------------------------------
+// Glossary
+//
 #pagebreak()
 = Glossary <sec:glossary>
 #include "03-tail/glossary.typ"

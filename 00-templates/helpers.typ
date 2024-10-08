@@ -6,6 +6,7 @@
 #import "/00-templates/boxes.typ": *
 #import "/00-templates/constants.typ": *
 #import "/00-templates/items.typ": *
+#import "/00-templates/summary.typ": *
 #import "/01-settings/metadata.typ": *
 
 // External Plugins
@@ -24,6 +25,36 @@
         text(fill: red)[?]
     }
 })
+
+//-------------------------------------
+// Specifications
+//
+#let specifications(
+  path: none,
+  ) = {
+  set page(margin: (
+    top: 0cm,
+    bottom: 0cm,
+    x: 0cm,
+  ))
+  if path != none {
+    image(path, width: 100%)
+  } else {
+    table(
+      columns: (100%),
+      rows: (100%),
+      align: center+horizon,
+      [
+        #rotate(-45deg,
+          origin: center+horizon,
+
+        )[
+          #text(fill: red, size: huger)[No specifications found]
+        ]
+      ]
+    )
+  }
+}
 
 
 //-------------------------------------
