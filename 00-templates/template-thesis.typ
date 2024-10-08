@@ -9,6 +9,7 @@
 #let thesis(
   title: none,
   subtitle: none,
+  midterm: false,
   version: none,
   author: (),
   professor: (),
@@ -126,6 +127,7 @@
     title: title,
     subtitle: subtitle,
     date: date,
+    midterm: midterm,
     school: school,
     author: author,
     professor: professor,
