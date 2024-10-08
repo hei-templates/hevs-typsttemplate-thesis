@@ -1,6 +1,6 @@
 //
 // Description: Import other modules so you only need to import the helpers
-// Use        : #import "../00-templates/helpers.typ": *
+// Use        : #import "/00-templates/helpers.typ": *
 // Author     : Silvan Zahno
 //
 #import "/00-templates/boxes.typ": *
@@ -129,18 +129,33 @@
   before: none,
   addline: true,
   stroke: 0.5pt,
-  length: 100%
+  length: 100%,
+  depth: depth-max,
+  indent: false,
 ) = {
   v(2em)
   text(large, [*Contents*])
   if addline == true {
     line(length:length, stroke:stroke)
   }
+  let h = selector(heading.where(level: 2))
+    .or(heading.where(level: 3))
+    .or(heading.where(level: 4))
+    .or(heading.where(level: 5))
+    .or(heading.where(level: 6))
+    .or(heading.where(level: 7))
+    .or(heading.where(level: 8))
+    .or(heading.where(level: 9))
+    .or(heading.where(level: 10))
+
   outline(
+    
     title: none,
-    target: selector(heading)
+    target: selector(h)
       .after(after)
-      .before(before, inclusive: false)
+      .before(before, inclusive: false),
+    depth: depth,
+    indent: indent,
   )
   if addline == true {
     line(length:length, stroke:stroke)
