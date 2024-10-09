@@ -5,7 +5,7 @@
   title: title,
   student: author.name,
   //picture: "/04-resources/my_picture",
-  year: date.year,
+  year: date.submission.display("[year]"),
   degree: school.orientation,
   field: school.specialisation,
   professor: professor,

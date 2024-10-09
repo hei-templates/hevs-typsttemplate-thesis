@@ -7,76 +7,164 @@
 #let page-title-thesis(
   title: none,
   subtitle: none,
-  midterm: false,
-  date: (),
-  school: (),
+  templateType: "thesis",
+  date: datetime.today(),
+  school: none,
   author: (),
-  professor: (),
-  expert:(),
+  professor: none,
+  expert:none,
   icons: (
     topleft: none,
     topright: none,
     bottomleft: none,
     bottomright: none,
   ),
+  extra-content-up: none,
+  extra-content-down: none,
 ) = {
-  table(
-    stroke:none,
-    columns: (50%, 50%),
-    align: (x, y) => (left, right).at(x),
-    [#if icons.topleft != none {[#image(icons.topleft, width:6cm)]} else {[]}],
-    [#if icons.topright != none {[#image(icons.topright, width:4cm)]} else {[]}],
+
+  set page(
+    margin: (
+      top:3.0cm,
+      bottom:3.0cm,
+      rest:3.5cm
+    )
   )
 
-  let page-title = if midterm {
-    [Midterm Report]
-  } else {
-    [BACHELOR'S THESIS]
+  //-------------------------------------
+  // Variables
+  //
+  let orientation = if school != none {
+    if "orientation" in school {
+      school.orientation
+    } else {none}
+  } else {none}
+
+  let specialisation = if school != none {
+    if "specialisation" in school {
+      school.specialisation
+    } else {none}
+  } else {none}
+
+  let thesis = if templateType == "thesis" {true}
+  else {false}
+
+  let midterm = if templateType == "midterm" {true}
+  else {false}
+
+
+  //-------------------------------------
+  // Page content
+  //
+  let content = {
+    v(0.5fr)
+    if school != none {
+      v(0.5fr)
+      // Degree Programme
+      if thesis or midterm {
+        if orientation != none {
+          align(center, [#text(size:larger, 
+            [Degree Programme]
+          )])
+          v(1em)
+        }
+      }
+
+      // Orientation
+      if orientation != none {
+        align(center, [#text(size:larger,
+          school.orientation
+        )])
+        v(1em)
+      }
+
+      // Specialisation
+      if specialisation != none {
+        align(center, [#text(size:large,
+          [Major #school.specialisation]
+        )])
+        v(2em)
+      }
+    }
+
+    if extra-content-up != none {
+      extra-content-up
+    }
+
+    // BACHELOR'S THESIS / Midterm Report
+    if thesis {
+      align(center, [#text(size:huge,
+        [*BACHELOR'S THESIS*]
+      )])
+      v(1em)
+    } else if midterm{
+      align(center, [#text(size:huge,
+        [*Midterm Report*]
+      )])
+      v(1em)
+    }
+
+    // DIPLOMA YEAR
+    if thesis or midterm {
+      align(center, [#text(size:huge, 
+        [*DIPLOMA #date.display("[year]")*]
+      )])
+      v(1em)
+    }
+
+    // AUTHORs
+    align(center, [#text(size:large, [
+      #if type(author) == array [
+        #enumerating_authors(items: author)
+      ] else [
+        #author.name
+      ]
+      #v(2em)
+    ])])
+    
+
+    titlebox(
+      title: title,
+      subtitle: subtitle,
+    )
+
+    if extra-content-down != none {
+      extra-content-down
+    }
+
+    [
+      #v(2em)
+      #if professor != none [
+        Professor \
+        #professor.name, #link("mailto:professor.email")[#professor.email]
+        \ \
+      ]
+
+      #if expert != none [
+        Expert \
+        #expert.name, #link("mailto:expert.email")[#expert.email]
+        \ \
+      ]
+
+      _Submission date of the report_ \
+      #date.display("[day] [month repr:long] [year]")
+
+    ]
+
+    v(1fr)
   }
 
-  v(1fr)
-  align(center, [#text(size:larger, "Degree Programme")])
-  v(1em)
-  align(center, [#text(size:larger, school.orientation)])
-  v(1em)
-  align(center, [#text(size:large, [Major #school.specialisation])])
-  v(2em)
-  align(center, [#text(size:huge, [*#page-title*])])
-  v(1em)
-  align(center, [#text(size:huge, [*DIPLOMA #date.year*])])
-  v(1em)
-  align(center, [#text(size:large, [#author.name])])
-  v(2em)
-
-  titlebox(
-    title: title,
-    subtitle: subtitle,
-  )
-
-  [
-    #v(2em)
-    Professor \
-    #professor.name, #link("mailto:professor.email")[#professor.email]
-    \ \
-    Expert \
-    #expert.name, #link("mailto:expert.email")[#expert.email]
-    \ \
-    _Submission date of the report_ \
-    #let submission-date = if midterm {
-      date.mid-term-submission
-    } else {
-      date.submission
-    }
-    #submission-date.display("[day] [month repr:long] [year]")
-
-    #v(1fr)
-  ]
-
-  table(
-    stroke:none,
+  grid(
     columns: (50%, 50%),
-    align: (x, y) => (left+horizon, right+horizon).at(x),
-    [#if icons.bottomleft != none {[#image(icons.bottomleft, width:4cm)]} else {[]}],
-    [#if icons.bottomright != none {[#image(icons.bottomright, width:1.5cm)]} else {[]}],
+    rows: (10%, 83%, 7%),
+    align(left+horizon)[#icons.topleft],
+    align(right+horizon)[#icons.topright],
+    grid.cell(
+      colspan: 2,
+      align(horizon)[#content]
+    ),
+    align(left+horizon)[#icons.bottomleft],
+    align(right+horizon)[#icons.bottomright],
   )
+
 }

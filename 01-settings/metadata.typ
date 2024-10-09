@@ -42,7 +42,6 @@
   mid-term-presentation: datetime(year: 2024, month: 6, day: 18),
   submission: datetime(year: 2024, month: 8, day: 16),
   current: datetime.today(),
-  year: datetime.today().display("[year]"),
 )
 
 #let tableof = (
@@ -55,10 +54,10 @@
 #let depth-max = 3
 
 #let icons = (
-  topleft: resources-folder + "logos/hei-vs-light.svg",
-  topright: resources-folder + "logos/hesso-logo.svg",
-  bottomleft: resources-folder + "logos/hevs-pictogram-only.svg",
-  bottomright: resources-folder + "logos/valais-excellence-logo.svg",
+  topleft: image(resources-folder + "logos/hei-vs-light.svg", width: 6cm),
+  topright: image(resources-folder + "logos/hesso-logo.svg", width: 4cm),
+  bottomleft: image(resources-folder + "logos/hevs-pictogram-only.svg", width: 4cm),
+  bottomright: image(resources-folder + "logos/valais-excellence-logo.svg", width: 1.5cm),
 )
 
 

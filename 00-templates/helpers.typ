@@ -32,24 +32,27 @@
 #let specifications(
   path: none,
   ) = {
+  if path != none {
   set page(margin: (
     top: 0cm,
     bottom: 0cm,
     x: 0cm,
   ))
-  if path != none {
     image(path, width: 100%)
   } else {
     table(
       columns: (100%),
       rows: (100%),
+      stroke: none,
       align: center+horizon,
       [
-        #rotate(-45deg,
+        #rotate(
+          -45deg,
           origin: center+horizon,
-
         )[
-          #text(fill: red, size: huger)[No specifications found]
+          #text(fill: red, size: huger)[
+            No specifications found
+          ]
         ]
       ]
     )
@@ -180,17 +183,23 @@
   let i = 1
   if items != none {
     for item in items {
-      if item != none {
-        if item.name != none and item.institute != none {
-          [#item.name#super(repr(item.institute))]
-        } else if item.name != none {
-          [#item.name]
-        }
-        if i < items.len() {
-          [, ]
+       if item != none {
+        if "name" in item {
+          if i > 1 {
+            if items.len() > 2 {
+              [\ ]
+            } else {
+              [, ]
+            }
+          }
+          i = i + 1
+          if "institute" in item{
+            [#item.name#super(repr(item.institute))]
+          } else {
+            [#item.name]
+          }
         }
       }
-      i = i + 1
     }
   }
 }

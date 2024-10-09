@@ -9,13 +9,13 @@
 #let thesis(
   title: none,
   subtitle: none,
-  midterm: false,
+  templateType: "thesis",
   version: none,
   author: (),
-  professor: (),
-  expert: (),
-  school: (),
-  date: (),
+  professor: none,
+  expert: none,
+  school: none,
+  date: datetime.today(),
   lang:"en",
   tableof : (
     toc: true,
@@ -31,10 +31,71 @@
     bottomleft: none,
     bottomright: none,
   ),
+  title-extra-content-up: none,
+  title-extra-content-down: none,
   body) = {
-  // Set the document's basic properties.
-  set document(author: author.name, title: title)
-  set page(margin: (top:3.5cm, bottom:3.5cm, rest:3.5cm))
+  //-------------------------------------
+  // Variables
+  //
+  
+  let authors = ()
+  if type(author) == array {
+    if author != none {
+      for a in author {
+        if a != none{
+          if "name" in a {
+            authors.push(a.name)
+          }
+        }
+      }
+    }
+  } else {
+    authors.push(author.name)
+  }
+
+  let thesis = if templateType == "thesis" {true}
+  else {false}
+
+  let midterm = if templateType == "midterm" {true}
+  else {false}
+
+
+  let submission-date = if midterm {
+    if "mid-term-submission" in date {
+      date.mid-term-submission
+    } else {
+      datetime.today()
+    }
+  } else {
+    if type(date) == datetime {
+      date
+    } else {
+      if "submission" in date {
+        date.submission
+      } else {
+        datetime.today()
+      }
+    }
+  }
+
+
+  //-------------------------------------
+  // Metadata
+  //
+  set document(
+    author: authors,
+    title: title,
+    date: submission-date,
+  )
+
+  //-------------------------------------
+  set page(
+    margin: (
+      top:3.5cm,
+      bottom:3.5cm,
+      rest:3.5cm
+    )
+  )
 
   // header and footer
   set page(
@@ -126,13 +187,15 @@
   page-title-thesis(
     title: title,
     subtitle: subtitle,
-    date: date,
-    midterm: midterm,
+    date: submission-date,
+    templateType: templateType,
     school: school,
     author: author,
     professor: professor,
     expert: expert,
     icons: icons,
+    extra-content-up: title-extra-content-up,
+    extra-content-down: title-extra-content-down,
   )
 
 
