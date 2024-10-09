@@ -30,9 +30,9 @@
         [
           #image(resources-folder + "logos/hes-adresse.png", width: 6.8cm)
         ],[
-          #image(resources-folder + "logos/swissuniversities.png", width: 3.3cm)
+          #image(resources-folder + "logos/swissuniversities.svg", width: 3.3cm)
         ],[
-          #image(resources-folder + "logos/equal_salary.png", width: 1cm)
+          #image(resources-folder + "logos/equal_salary.svg", width: 1cm)
         ],[
           #image(resources-folder + "logos/valais-excellence-logo.svg", width: 1.1cm)
         ]
