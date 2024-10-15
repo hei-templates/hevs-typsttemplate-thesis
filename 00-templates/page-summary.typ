@@ -67,7 +67,7 @@
 
       #v(0.5cm)
 
-      #square(size: 0.7cm, fill: blue.lighten(70%))
+      //#square(size: 0.7cm, fill: blue.lighten(70%))
 
       #v(0.6cm)
       #set text(size: 10pt)
@@ -101,11 +101,11 @@
         #heading(numbering:none, outlined: false)[#title]
       ])
       #table(
-        columns: (1cm, 3.5cm, 1fr),
+        columns: (0cm, 3.5cm, 1fr),
         stroke: none,
         align: left + horizon,
         [
-          #square(size: 0.7cm, fill: blue.lighten(70%))
+          //#square(size: 0.7cm, fill: blue.lighten(70%))
         ],[
           #set text(
             size: 12pt,

@@ -1,5 +1,6 @@
 // HEADER
 #import "/00-templates/helpers.typ": *
+#import "/00-templates/page-summary.typ": *
 
 #show: summary.with(
   title: title,
