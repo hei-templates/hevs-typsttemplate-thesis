@@ -75,6 +75,11 @@
 //
 #pagebreak()
 = Introduction <sec:intro>
+#todo([
+  This is not finished add:
+  - a
+  - b
+])
 #add-chapter(
   "/02-main/03-introduction.typ",
   heading-offset: 1
