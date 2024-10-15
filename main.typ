@@ -54,6 +54,8 @@
 #toc(
   lang: lang,
   tableof: tableof,
+  depth: depth-max,
+  before: <sec:glossary>, // can be none for toc on all document
 )
 
 //-------------------------------------

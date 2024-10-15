@@ -6,17 +6,13 @@
 #import "/00-templates/boxes.typ": *
 #import "/00-templates/constants.typ": *
 #import "/00-templates/items.typ": *
-#import "/00-templates/summary.typ": *
 #import "/01-settings/metadata.typ": *
 
 // External Plugins
+#import "@preview/codelst:2.0.1": sourcecode
 #import "@preview/tablex:0.0.8" : *
 #import "@preview/glossarium:0.4.2": *
 #show: make-glossary
-
-
-// Fancy pretty print with line numbers and stuff
-#import "@preview/codelst:2.0.1": sourcecode
 
 #let myref(label) = locate(loc =>{
     if query(label,loc).len() != 0 {
@@ -73,16 +69,35 @@
     tol: false,
     toe: false,
   ),
+  before: none,
   indent: true,
-  depth: none,
+  depth: depth-max,
 ) = {
   // Table of content
   if tableof.toc == true {
-    outline(
-      title: [#if lang == "de" {"Inhalt"} else if lang == "fr" {"Contenu"} else {"Contents"}],
-      indent: indent,
-      depth: depth,
-    )
+    let title = [#if lang == "de" {
+      "Inhalt"
+    } else if lang == "fr" {
+      "Contenu"
+    } else {
+        "Contents"
+    }]
+
+    if before != none {
+      outline(
+        title: title,
+        target: selector(heading).before(before, inclusive: true),
+        indent: indent,
+        depth: depth,
+      )
+    } else {
+      outline(
+        title: title,
+        indent: indent,
+        depth: depth,
+      )
+    }
+
   }
 
   // Table of figures

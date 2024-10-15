@@ -31,8 +31,8 @@
     bottomleft: none,
     bottomright: none,
   ),
-  title-extra-content-up: none,
-  title-extra-content-down: none,
+  title-extra-content-top: none,
+  title-extra-content-bottom: none,
   body) = {
   //-------------------------------------
   // Variables
@@ -85,7 +85,8 @@
   set document(
     author: authors,
     title: title,
-    date: submission-date,
+    date: datetime.today(),
+    keywords: keywords,
   )
 
   //-------------------------------------
@@ -145,7 +146,7 @@
 
   show heading: (it) => {
     if (depth-max != none) and (it.level > depth-max) {
-      h(0.8em)*(it.level - depth + 1) + it.body + linebreak()
+      /*h(0.8em)*(it.level - depth-max + 1) + */it.body + linebreak()
     } else {
       it
     }
@@ -194,8 +195,8 @@
     professor: professor,
     expert: expert,
     icons: icons,
-    extra-content-up: title-extra-content-up,
-    extra-content-down: title-extra-content-down,
+    extra-content-top: title-extra-content-top,
+    extra-content-bottom: title-extra-content-bottom,
   )
 
 
