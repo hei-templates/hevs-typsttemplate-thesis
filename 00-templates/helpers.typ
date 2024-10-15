@@ -25,15 +25,14 @@
 //-------------------------------------
 // Specifications
 //
-#let specifications(
-  path: none,
-  ) = {
-  if path != none {
+#let full-page(path) = {
   set page(margin: (
     top: 0cm,
     bottom: 0cm,
     x: 0cm,
   ))
+
+  if path != none {
     image(path, width: 100%)
   } else {
     table(
@@ -47,7 +46,7 @@
           origin: center+horizon,
         )[
           #text(fill: red, size: huger)[
-            No specifications found
+            No page found
           ]
         ]
       ]
@@ -430,6 +429,6 @@
     pagebreak()
   }
   #set heading(offset: heading-offset)
-  #include "/02-main/" + file + ".typ"
+  #include file
   #set heading(offset: 0)
 ]

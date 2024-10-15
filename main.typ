@@ -36,10 +36,8 @@
 //-------------------------------------
 // Specifications + Summary
 //
-#specifications(
-  //path: "/04-resources/specifications.svg"
-)
-#add-chapter("00-summary")
+#full-page("/04-resources/specifications.svg")
+#add-chapter("/02-main/00-summary.typ")
 
 //-------------------------------------
 // Report info + table of content
@@ -63,14 +61,14 @@
 //
 #pagebreak()
 #heading(numbering:none)[Acknowledgements] <sec:ack>
-#add-chapter("01-acknowledgements")
+#add-chapter("/02-main/01-acknowledgements.typ")
 
 //-------------------------------------
 // Abstract
 //
 #pagebreak()
 #heading(numbering:none)[Abstract] <sec:abstract>
-#add-chapter("02-abstract")
+#add-chapter("/02-main/02-abstract.typ")
 
 //-------------------------------------
 // Introduction
@@ -78,7 +76,7 @@
 #pagebreak()
 = Introduction <sec:intro>
 #add-chapter(
-  "03-introduction",
+  "/02-main/03-introduction.typ",
   heading-offset: 1
 )
 
@@ -91,7 +89,7 @@
 #lorem(50)
 
 #add-chapter(
-  "04-analysis",
+  "/02-main/04-analysis.typ",
   heading-offset: 1,
   after:<sec:analysis>,
   before:<sec:design>
@@ -106,7 +104,7 @@
 #lorem(50)
 
 #add-chapter(
-  "05-design",
+  "/02-main/05-design.typ",
   heading-offset: 1,
   after:<sec:design>,
   before:<sec:impl>
@@ -122,7 +120,7 @@
 #lorem(50)
 
 #add-chapter(
-  "06-implementation",
+  "/02-main/06-implementation.typ",
   heading-offset: 1,
   after:<sec:impl>,
   before:<sec:validation>
@@ -138,7 +136,7 @@
 #lorem(50)
 
 #add-chapter(
-  "07-validation",
+  "/02-main/07-validation.typ",
   heading-offset: 1,
   after: <sec:validation>,
   before: <sec:conclusion> 
@@ -151,10 +149,9 @@
 = Conclusion <sec:conclusion>
 
 #add-chapter(
-  "08-conclusion",
+  "/02-main/08-conclusion.typ",
   heading-offset: 1,
 )
-
 
 
 //-------------------------------------
@@ -162,12 +159,11 @@
 //
 #pagebreak()
 = Glossary <sec:glossary>
-#include "03-tail/glossary.typ"
+#add-chapter(
+  "/03-tail/glossary.typ",
+  heading-offset: 0,
+)
 
-//-------------------------------------
-// Appendix
-//
-#include "03-tail/a-appendix.typ"
 
 //-------------------------------------
 // Bibliography
@@ -175,3 +171,8 @@
 #if bib == true {
   include "03-tail/bibliography.typ"
 }
+
+//-------------------------------------
+// Appendix
+//
+#include "03-tail/a-appendix.typ"
