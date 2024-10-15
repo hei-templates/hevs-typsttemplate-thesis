@@ -19,8 +19,8 @@
     bottomleft: none,
     bottomright: none,
   ),
-  extra-content-up: none,
-  extra-content-down: none,
+  extra-content-top: none,
+  extra-content-bottom: none,
 ) = {
 
   set page(
@@ -56,10 +56,10 @@
   //-------------------------------------
   // Page content
   //
-  let content = {
-    v(0.5fr)
+  let content-up = {
+    //line(length: 100%)
     if school != none {
-      v(0.5fr)
+      //v(0.5fr)
       // Degree Programme
       if thesis or midterm {
         if orientation != none {
@@ -87,8 +87,8 @@
       }
     }
 
-    if extra-content-up != none {
-      extra-content-up
+    if extra-content-top != none {
+      extra-content-top
     }
 
     // BACHELOR'S THESIS / Midterm Report
@@ -115,7 +115,10 @@
     // AUTHORs
     align(center, [#text(size:large, [
       #if type(author) == array [
-        #enumerating_authors(items: author)
+        #enumerating_authors(
+          items: author,
+          multiline: true,
+        )
       ] else [
         #author.name
       ]
@@ -128,40 +131,45 @@
       subtitle: subtitle,
     )
 
-    if extra-content-down != none {
-      extra-content-down
+    if extra-content-bottom != none {
+      extra-content-bottom
     }
+    
 
-    [
-      #v(2em)
-      #if professor != none [
-        Professor \
-        #professor.name, #link("mailto:professor.email")[#professor.email]
-        \ \
-      ]
-
-      #if expert != none [
-        Expert \
-        #expert.name, #link("mailto:expert.email")[#expert.email]
-        \ \
-      ]
-
-      _Submission date of the report_ \
-      #date.display("[day] [month repr:long] [year]")
-
-    ]
-
-    v(1fr)
   }
+
+  let content-down = [
+    #v(2em)
+    #if professor != none [
+      Professor \
+      #professor.name, #link("mailto:professor.email")[#professor.email]
+      \ \
+    ]
+    #if expert != none [
+      Expert \
+      #expert.name, #link("mailto:expert.email")[#expert.email]
+      \ \
+    ]
+    _Submission date of the report_ \
+    #date.display("[day] [month repr:long] [year]")
+    #v(1em)
+  ]
+
+
 
   grid(
     columns: (50%, 50%),
-    rows: (10%, 83%, 7%),
+    rows: (10%, 63%, 20%, 7%),
     align(left+horizon)[#icons.topleft],
     align(right+horizon)[#icons.topright],
+    //stroke: 0.5pt,
     grid.cell(
       colspan: 2,
-      align(horizon)[#content]
+      align(horizon)[#content-up]
+    ),
+    grid.cell(
+      colspan: 2,
+      align(horizon)[#content-down]
     ),
     align(left+horizon)[#icons.bottomleft],
     align(right+horizon)[#icons.bottomright],

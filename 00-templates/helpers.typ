@@ -179,6 +179,7 @@
 //
 #let enumerating_authors(
   items: none,
+  multiline: false,
 ) = {
   let i = 1
   if items != none {
@@ -186,8 +187,12 @@
        if item != none {
         if "name" in item {
           if i > 1 {
-            if items.len() > 2 {
-              [\ ]
+            if multiline == true {
+              if items.len() > 2 {
+                [\ ]
+              } else {
+                [, ]
+              }
             } else {
               [, ]
             }
@@ -225,12 +230,22 @@
 //
 #let enumerating_items(
   items: none,
+  bold: false,
+  italic: false,
 ) = {
   let i = 1
   if items != none {
     for item in items {
       if item != none {
-        [#item]
+        if bold == true and italic == true {
+          [#text(style: "italic")[*#item*]]
+        } else if bold == true {
+          [*#item*]
+        } else if italic == true {
+          [#text(style: "italic")[#item]]
+        } else {
+          [#item]
+        }
         if i < items.len() {
           [, ]
         }

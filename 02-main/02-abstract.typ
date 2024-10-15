@@ -1,3 +1,4 @@
+#import "/00-templates/helpers.typ": *
 
 #lorem(50)
 
@@ -6,4 +7,8 @@
 #lorem(50)
 
 #v(2em)
-_*Keywords*_: _keyword 1_, _keyword 2_, _keyword 3_
+_*Keywords*_: 
+#enumerating_items(
+  items: keywords,
+  italic: true
+)

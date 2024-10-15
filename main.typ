@@ -11,7 +11,14 @@
   title: title,
   subtitle: subtitle,
   version: version,
-  author: author,
+  templateType: "thesis",
+  author: (
+    author,
+    // (name: "author 2"),
+    // (name: "author 3"),
+    // (name: "author 4"),
+    // (name: "author 5"),
+  ),
   professor: professor,
   expert: expert,
   school: school,
@@ -19,6 +26,12 @@
   lang: lang,
   tableof: tableof,
   icons: icons,
+  // title-extra-content-top: [
+  //   #align(center+horizon)[#image(placeholder, width: 6cm)]
+  // ],
+  // title-extra-content-bottom: [
+  //   #align(center+horizon)[#text(fill: red)[#image(placeholder, width: 6cm)]]
+  // ],
 )
 //-------------------------------------
 // Specifications + Summary
